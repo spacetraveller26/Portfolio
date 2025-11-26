@@ -1,0 +1,156 @@
+
+/* -------------- GLOBAL STYLING -------------- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #020202, #0c0c24);
+    color: #fff;
+}
+:root {
+    --neon-blue: #00aaff;
+}
+/* -------------- NAVIGATION BAR -------------- */
+nav {
+    width: 96%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 30, 0.7);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #00aaff;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #00aaff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+    text-shadow: 0 0 10px #00aaff;
+}
+
+/* -------------- PAGE SECTION -------------- */
+.section {
+    padding: 75px 60px 60px 60px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+    color: #00aaff;
+    text-shadow: 0 0 20px #00aaff;
+}
+
+/* -------------- DROPDOWN -------------- */
+.dropdown {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: rgba(20, 20, 40, 0.8);
+    color: #00aaff;
+    border: 1px solid #00aaff;
+    font-size: 16px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.dropdown:hover {
+    box-shadow: 0 0 15px #00aaff;
+}
+
+/* -------------- PROJECT LIST -------------- */
+.project-list {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* -------------- PROJECT ITEM -------------- */
+.project-item {
+    padding: 20px;
+    border-left: 4px solid #00aaff;
+    background: rgba(15, 15, 35, 0.9);
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0, 238, 255, 0.2);
+}
+
+.project-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 0 20px #00aaff;
+}
+
+.project-item a {
+    color: #00aaff;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 10px #00aaff;
+}
+
+.project-item p {
+    margin: 8px 0 0;
+    color: #cfcfcf;
+    font-size: 14px;
+}
+/* -----------------------------------------------------
+   FOOTER CONTACT
+------------------------------------------------------*/
+.footer {
+    width: 100%;
+    padding: 18px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 170, 255, 0.15);
+}
+
+.footer span {
+    color: var(--neon-blue);
+}
+
+
+/* -------------- RESPONSIVE -------------- */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 15px;
+    }
+
+    .section h2 {
+        font-size: 34px;
+    }
+
+    .project-list {
+        width: 95%;
+    }
+
+    .project-item {
+        padding: 15px;
+    }
+}
+

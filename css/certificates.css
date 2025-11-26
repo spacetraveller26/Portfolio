@@ -1,0 +1,162 @@
+/* ---------- GLOBAL PAGE STYLING ---------- */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #020202, #0b0b22);
+    color: #ffffff;
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+nav {
+    width: 96%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 30, 0.7);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+/* ---------- SECTION TITLE ---------- */
+.section {
+    padding: 140px 40px 60px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 45px;
+    color: #00eaff;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px #00eaff;
+}
+
+/* ---------- GRID LAYOUT ---------- */
+.grid {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* ---------- CERTIFICATE CARD ---------- */
+.card {
+    background: rgba(15, 15, 40, 0.9);
+    border-radius: 15px;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 234, 255, 0.3);
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00eaff;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-title {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00eaff;
+    text-shadow: 0 0 8px #00eaff;
+}
+
+/* ---------- POPUP FULL IMAGE ---------- */
+#popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 20, 0.85);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#popupImage {
+    width: 70%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #00eaff;
+    animation: fadeZoom 0.3s ease-in-out;
+}
+/* -----------------------------------------------------
+   FOOTER CONTACT
+------------------------------------------------------*/
+:root {
+    --neon-blue: #00aaff;
+}
+.footer {
+    width: 100%;
+    padding: 18px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    margin-top: 103px;
+    border-top: 1px solid rgba(0, 170, 255, 0.15);
+}
+
+.footer span {
+    color: var(--neon-blue);
+}
+
+/* Popup Animation */
+@keyframes fadeZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ---------- RESPONSIVE FIXES ---------- */
+@media (max-width: 768px) {
+    .section h2 {
+        font-size: 35px;
+    }
+    #popupImage {
+        width: 90%;
+    }
+}

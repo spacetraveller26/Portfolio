@@ -1,0 +1,174 @@
+/* Same Theme Variables */
+:root {
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --text-light: #e6e6e6;
+    --text-muted: #b3b3b3;
+    --bg-dark: #0a0f1f;
+    --card-dark: rgba(20, 25, 40, 0.6);
+    --neon-blue: #00aaff;
+    --neon-purple: #9b5cff;
+    --text-light: #e6f1ff;
+    --text-dim: #9aa6c2;
+    --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/*body {
+    background: var(--bg-dark);
+    color: var(--text-light);    
+}*/
+body {
+    background: var(--bg-dark);
+    font-family: "Poppins", sans-serif;
+    color: var(--text-light);
+    padding-top: 90px;
+    overflow-x: hidden;
+}
+/* NAVBAR (identical to home) */
+nav {
+    position: fixed;
+    top: 0;
+    width: 96%;
+    background: rgba(10, 15, 31, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-light);
+    transition: 0.3s;
+    position: relative;
+    font-size: 15px;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    color: var(--neon-blue);
+}
+
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: var(--neon-blue);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* ------------------------------
+   ABOUT SECTION
+------------------------------ */
+.about-section {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    animation: fadeIn 1.3s ease;
+}
+
+.title {
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: var(--neon-blue);
+}
+
+.about-card {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 170, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.08);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    animation: slideUp 1s ease;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 26px;
+    color: var(--neon-blue);
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+/* Skills Chips */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.skills span {
+    padding: 10px 18px;
+    border: 1px solid var(--neon-blue);
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--text-light);
+    background: rgba(0, 170, 255, 0.1);
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: var(--neon-blue);
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Interests Section */
+.interests p {
+    color: var(--text-muted);
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(0,0,0,0.6);
+    margin-top: 50px;
+    border-top: 1px solid rgba(0,170,255,0.15);
+}
+
+.footer span {
+    color: var(--neon-blue);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
